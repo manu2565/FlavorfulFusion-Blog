@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block contant %}
+
+<section>
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h1 class="page-title">LogIn</h1>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="d-md-flex post-entry-2 half">
+        <a href="#" class="me-4 thumbnail">
+          <img
+            src="/static/img/post-landscape-2.jpg"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+        <div class="ps-md-5 mt-4 mt-md-0">
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="" class="form-label">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                placeholder="enter username"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                name="Password1"
+                id="Password1"
+                placeholder="enter password"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
